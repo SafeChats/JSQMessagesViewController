@@ -252,4 +252,9 @@
 	return NO;
 }
 
+- (void)delete:(id)sender
+{
+   self.text = @"";
+}
+
 @end
