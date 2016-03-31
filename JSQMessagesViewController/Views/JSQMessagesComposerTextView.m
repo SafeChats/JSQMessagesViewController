@@ -243,7 +243,7 @@
 			}
 		} else {
 			if ( action == @selector(select:) || action == @selector(selectAll:) ||
-				action == @selector(paste:)) {
+				action == @selector(paste:) || action ==@selector(replace:)) {
 				return YES;
 			}
 		}
