@@ -944,8 +944,12 @@ static void * kJSQMessagesKeyValueObservingContext = &kJSQMessagesKeyValueObserv
 - (void)jsq_setCollectionViewInsetsTopValue:(CGFloat)top bottomValue:(CGFloat)bottom
 {
     UIEdgeInsets insets = UIEdgeInsetsMake(top, 0.0f, bottom, 0.0f);
-    self.collectionView.contentInset = insets;
-    self.collectionView.scrollIndicatorInsets = insets;
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self scrollToBottomAnimated:YES];
+        self.collectionView.contentInset = insets;
+        self.collectionView.scrollIndicatorInsets = insets;
+    });
 }
 
 - (BOOL)jsq_isMenuVisible
