@@ -871,19 +871,19 @@ static void JSQInstallWorkaroundForSheetPresentationIssue26295020(void) {
 
 - (void)jsq_setCollectionViewInsetsTopValue:(CGFloat)top bottomValue:(CGFloat)bottom
 {
-<<<<<<< HEAD
-    UIEdgeInsets insets = UIEdgeInsetsMake(top, 0.0f, bottom, 0.0f);
-    
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [self scrollToBottomAnimated:YES];
-        self.collectionView.contentInset = insets;
-        self.collectionView.scrollIndicatorInsets = insets;
-    });
-=======
+//<<<<<<< HEAD
+//    UIEdgeInsets insets = UIEdgeInsetsMake(top, 0.0f, bottom, 0.0f);
+//    
+//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//        [self scrollToBottomAnimated:YES];
+//        self.collectionView.contentInset = insets;
+//        self.collectionView.scrollIndicatorInsets = insets;
+//    });
+//=======
     UIEdgeInsets insets = UIEdgeInsetsMake(self.topLayoutGuide.length + top, 0.0f, bottom, 0.0f);
     self.collectionView.contentInset = insets;
     self.collectionView.scrollIndicatorInsets = insets;
->>>>>>> jessesquires/develop
+//>>>>>>> jessesquires/develop
 }
 
 - (BOOL)jsq_isMenuVisible

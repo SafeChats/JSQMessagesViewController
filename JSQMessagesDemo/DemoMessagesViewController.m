@@ -80,15 +80,15 @@
      *  Register custom menu actions for cells.
      */
     [JSQMessagesCollectionViewCell registerMenuAction:@selector(customAction:)];
-<<<<<<< HEAD
+//<<<<<<< HEAD
     [UIMenuController sharedMenuController].menuItems = @[ [[UIMenuItem alloc] initWithTitle:@"Custom Action"
                                                                                       action:@selector(customAction:)] ];
 	
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handle_menuWillHide:) name:UIMenuControllerWillHideMenuNotification object:nil];
-	
-=======
-
->>>>>>> jessesquires/develop
+//	
+//=======
+//
+//>>>>>>> jessesquires/develop
 	
     /**
      *  OPT-IN: allow cells to be deleted
